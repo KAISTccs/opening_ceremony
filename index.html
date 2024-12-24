@@ -21,7 +21,7 @@
     .image-container {
       display: flex; /* Flexbox 사용 */
       flex-direction: column; /* 세로 정렬 */
-      align-items: center; /* 수평 중앙 정렬 */
+      align-items: center; /* 이미지 중앙 정렬 */
       justify-content: center; /* 수직 중앙 정렬 */
       width: 100%; /* 컨테이너 너비 */
       margin: 0;
@@ -33,7 +33,12 @@
       max-width: 1080px; /* 최대 너비 제한 */
       height: auto; /* 비율 유지 */
       display: block; /* 기본 여백 제거 */
-      margin: 0; /* 이미지 간 간격 제거 */
+    }
+
+    .image-container a {
+      display: block; /* 링크 간 공백 제거 */
+      margin: 0; /* 여백 제거 */
+      padding: 0;
     }
 
     a {
@@ -42,6 +47,14 @@
 
     a[href="#"] {
       cursor: default; /* 클릭 방지 */
+    }
+
+    /* 반응형 디자인 */
+    @media (max-width: 1080px) {
+      .image-container img {
+        width: 100%; /* 화면 너비에 맞춤 */
+        max-width: 100%; /* 최대 너비를 화면 크기로 제한 */
+      }
     }
   </style>
 </head>
