@@ -18,24 +18,41 @@
 
   <!-- 스타일 -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #BCBCBC; /* 배경색 */
-    }
-    .image-container {
-      padding: 0;
-      margin: 0;
-      text-align: center; /* 이미지 중앙 정렬 */
-    }
-    .image-container img {
-      width: 100%;
-      max-width: 1080px; /* 최대 너비 설정 */
-      height: auto; /* 비율 유지 */
-      display: block; /* 기본 여백 제거 */
-      margin: 0 auto; /* 중앙 정렬 */
-    }
-  </style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #BCBCBC; /* 배경색 */
+  }
+
+  .image-container {
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    margin: 0; /* 여백 제거 */
+    padding: 0;
+    width: 100%; /* 컨테이너 크기 고정 */
+  }
+
+  .image-container img {
+    width: auto; /* 비율 유지 */
+    max-width: 100%; /* 화면 너비에 맞춤 */
+    height: auto; /* 높이 자동 조정 */
+    display: block;
+  }
+
+  a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+  }
+
+  a[href="#"] {
+    cursor: default; /* 클릭 방지 */
+  }
+</style>
 </head>
 <body>
   <!-- Image 1 -->
