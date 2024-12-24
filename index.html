@@ -5,17 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KAISTccs Opening Ceremony & Forum</title>
 
-  <!-- 파비콘 설정 -->
-  <link rel="icon" href="https://i.imgur.com/w8hwT9m.png" type="image/x-icon">
-  <link rel="shortcut icon" href="https://i.imgur.com/w8hwT9m.png" type="image/x-icon">
-
-  <!-- Open Graph 설정 -->
-  <meta property="og:title" content="KAISTccs Opening Ceremony & Forum">
-  <meta property="og:description" content="A Leap Forward, Opening Ceremony of KAIST Center for Contemplative Science at Creative Learning Building & Contemplative Science Forum">
-  <meta property="og:image" content="https://i.imgur.com/WxtWGYA.png">
-  <meta property="og:url" content="https://kaistccs.github.io/opening_ceremony/">
-  <meta property="og:type" content="website">
-
   <!-- 스타일 -->
   <style>
     * {
@@ -31,15 +20,17 @@
     }
 
     .image-container {
-      display: flex; /* 중앙 정렬 */
+      display: flex; /* Flexbox 사용 */
       justify-content: center; /* 수평 중앙 */
       align-items: center; /* 수직 중앙 */
       margin: 0; /* 여백 제거 */
       padding: 0; /* 패딩 제거 */
+      width: 100%; /* 컨테이너 너비를 화면에 맞춤 */
     }
 
     .image-container img {
-      width: 1080px;
+      width: 100%; /* 이미지가 컨테이너에 맞춤 */
+      max-width: 1080px; /* 최대 가로 길이 제한 */
       height: auto; /* 비율 유지 */
       display: block; /* 기본 여백 제거 */
     }
@@ -52,29 +43,29 @@
       cursor: default; /* 클릭 방지 */
     }
 
-    /* 반응형 디자인 (크기 줄이지 않음) */
+    /* 반응형 디자인 */
     @media (max-width: 1080px) {
       .image-container img {
-        max-width: 100%; /* 이미지 크기 유지 */
+        max-width: 100%; /* 화면 너비에 맞춤 */
       }
     }
   </style>
 </head>
 <body>
   <!-- Image 1 -->
-  <div id="section1" class="image-container">
+  <div class="image-container">
     <a href="https://example.com/page1" target="_blank">
       <img src="img1.svg" alt="Image 1">
     </a>
   </div>
   <!-- Image 2 -->
-  <div id="section2" class="image-container">
+  <div class="image-container">
     <a href="https://example.com/page2" target="_blank">
       <img src="img2.svg" alt="Image 2">
     </a>
   </div>
   <!-- Image 3 -->
-  <div id="section3" class="image-container">
+  <div class="image-container">
     <a href="https://forms.gle/ZjTigZ7bR33rZGYs7" target="_blank">
       <img src="img3.svg" alt="Image 3">
     </a>
